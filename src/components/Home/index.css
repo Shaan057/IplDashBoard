@@ -18,7 +18,12 @@
   align-self: flex-start;
   list-style-type: none;
 }
-
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
 .logo-title-container {
   display: flex;
   align-items: center;

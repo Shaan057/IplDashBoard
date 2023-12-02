@@ -3,17 +3,25 @@
   align-items: center;
   justify-content: space-around;
   padding: 30px;
-  background-color: #0c1626;
   border-radius: 5px;
   margin-top: 15px;
+  width: 90%;
 }
-
+.main {
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  background-color: #0c1626;
+  align-items: center;
+  gap: 10px;
+  width: 80%;
+}
 .team-logo {
   width: 200px;
   height: 200px;
 }
 .heading-team {
-  font-size: 40px;
+  font-size: 30px;
 }
 .date {
   font-size: 20px;
@@ -42,16 +50,18 @@
 }
 
 @media screen and (max-width: 768px) {
+  .heading-team {
+    font-size: 25px;
+  }
   .match-details {
     text-align: start;
   }
   .container-1 {
   }
   .latest-match-container {
-    width: 96%;
+    width: 80%;
     flex-direction: column;
     justify-content: space-around;
-    background-color: #1e293b;
     border-radius: 15px;
     align-items: flex-start;
     margin-top: 10px;
@@ -72,4 +82,9 @@
     font-size: 13px;
     color: #ffffff80;
   }
+}
+
+.piechart {
+  /* padding: 10px;
+  margin: 10px; */
 }

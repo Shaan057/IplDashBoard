@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import {Component} from 'react'
 
 import Loader from 'react-loader-spinner'
@@ -49,7 +50,7 @@ class Home extends Component {
   }
 
   renderLoader = () => (
-    <div className="loader-container">
+    <div className="loader-container" testid="loader">
       <Loader type="Oval" color="#ffffff" height="50" />
     </div>
   )

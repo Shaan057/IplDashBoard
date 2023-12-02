@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 
@@ -16,6 +17,11 @@ class TeamMatches extends Component {
 
   componentDidMount() {
     this.getRecentMatches()
+  }
+
+  onClickBackButton = () => {
+    const {history} = this.props
+    history.push('/')
   }
 
   setRecentMatches = (formattedData, isLoading) => {
@@ -67,23 +73,34 @@ class TeamMatches extends Component {
   }
 
   renderTeamMatches = () => {
-    const {match} = this.props
-    const {params} = match
-    const {id} = params
     const {recentMatchesData} = this.state
-    const {teamBannerURL, latestMatch} = recentMatchesData
+
+    const {teamBannerURL, recentMatches, latestMatch} = recentMatchesData
 
     return (
       <div className="team-matches-container">
         <img src={teamBannerURL} alt="team banner" className="team-banner" />
-        <LatestMatch latestMatchData={latestMatch} />
+
+        <LatestMatch
+          latestMatchData={latestMatch}
+          recentMatches={recentMatches}
+        />
+
         {this.renderRecentMatchesList()}
+
+        <button
+          className="back-button"
+          onClick={this.onClickBackButton}
+          type="button"
+        >
+          Back
+        </button>
       </div>
     )
   }
 
   renderLoader = () => (
-    <div className="loader-container">
+    <div className="loader-container" testid="loader">
       <Loader type="Oval" color="#ffffff" height="50" />
     </div>
   )
