@@ -269,9 +269,6 @@ Use these files to complete the implementation:
 
 </details>
 
-<details>
-<summary>Preview</summary>
+### Preview
 
-### [Link](link)
-
-</details>
+### [Link](https://ipl-dash-board-shaan.vercel.app/)
