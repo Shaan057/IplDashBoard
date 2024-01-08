@@ -1,12 +1,10 @@
-In this project, let's build an **IPL Dashboard App** by applying the concepts we have learned till now.
+# IPL Dashboard App
+
+#### Get the stats of the IPL Teams
 
 ### Refer to the image below:
 
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/ipl-dashboard-output-v2.gif" alt="ipl-dashboard-output" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
+![Link](https://assets.ccbp.in/frontend/content/react-js/ipl-dashboard-output-v2.gif)
 
 ### Design Files
 
@@ -20,35 +18,23 @@ In this project, let's build an **IPL Dashboard App** by applying the concepts w
 
 </details>
 
-### Set Up Instructions
+### Features
 
 <details>
-<summary>Click to view</summary>
+<summary>Functionality</summary>
 
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
-</details>
-
-### Completion Instructions
-
-<details>
-<summary>Functionality to be added</summary>
-<br/>
-
-The app must have the following functionalities
-
-- When the app is opened, Home Route should be displayed
+- When the app is opened, Home Route is displayed
 - When the Home Route is opened,
   - Make HTTP GET request to the **teamsApiUrl**
-  - **_loader_** should be displayed while fetching the data
-  - After fetching the data, the list of teams should be displayed
+  - **_loader_** is displayed while fetching the data
+  - After fetching the data, the list of teams is displayed
 - When a team card in Home Route is clicked,
-  - Page should be navigated to the Team Matches Route with the URL `/team-matches/:id`
+  - Page is navigated to the Team Matches Route with the URL `/team-matches/:id`
 - When the Team Matches Route is opened,
   - Make HTTP GET request to the **teamMatchesApiUrl** with the team id to get the recent matches data of the team
     - Example: `https://apis.ccbp.in/ipl/KKR`
-  - **_loader_** should be displayed while fetching the data
-  - After fetching the data, the team banner, latest match, and list of recent matches should be displayed
+  - **_loader_** is displayed while fetching the data
+  - After fetching the data, the team banner, latest match, and list of recent matches is displayed
 
 </details>
 
@@ -169,104 +155,6 @@ Use these files to complete the implementation:
 - `src/components/LatestMatch/index.css`
 - `src/components/MatchCard/index.js`
 - `src/components/MatchCard/index.css`
-</details>
-
-### Quick Tips
-
-<details>
-<summary>Click to view</summary>
-<br>
-
-- To display the animated loader, we need to import the Loader component using the below statement
-
-  ```
-  import Loader from 'react-loader-spinner'
-  ```
-
-- In order to display the given animated loader, pass the `type` and `color` props to the `Loader` component with values as **Oval** and **#ffffff** , respectively
-
-  ```
-  <Loader type="Oval" color="#ffffff" height={50} width={50} />
-  ```
-
-</details>
-
-### Important Note
-
-<details>
-<summary>Click to view</summary>
-
-<br/>
-
-**The following instructions are required for the tests to pass**
-
-- The banner image in the Team Matches Route should have the alt attribute value as `team banner`
-- The alt attribute values for the images received from the response are given in the **Example response**
-- The API responses received from the given api URLs should be converted to camel case
-- Wrap the `Loader` component with an HTML container element and add the `testid` attribute value as `loader` to it as shown below
-  ```
-  <div testid="loader">
-      <Loader type="Oval" color="#ffffff" height={50} width={50} />
-  </div>
-  ```
-- Render HomeRoute component when path in URL matches `/`
-- Render TeamMatchesRoute component when path in URL matches `/team-matches/:id`
-- No need to use the `BrowserRouter` in `App.js` as we have already included in `index.js` file
-- Each TeamMatchesRoute should have different gradient colors as background based on the selected team
-
-</details>
-
-### Resources
-
-<details>
-<summary>Image URLs</summary>
-
-- [https://assets.ccbp.in/frontend/react-js/ipl-dashboard-sm-bg.png](https://assets.ccbp.in/frontend/react-js/ipl-dashboard-sm-bg.png)
-- [https://assets.ccbp.in/frontend/react-js/ipl-dashboard-lg-bg.png](https://assets.ccbp.in/frontend/react-js/ipl-dashboard-lg-bg.png)
-- [https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png](https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png) alt should be **ipl logo**
-
-</details>
-
-<details>
-<summary>Colors</summary>
-
-<br/>
-
-**Background Colors**:
-
-<div style="background-color: #1e293b; width: 150px; padding: 10px; color: white">Hex: #1e293b</div>
-<div style="background-color: #a4261d; width: 150px; padding: 10px; color: white">Hex: #a4261d</div>
-<div style="background-color: #5755a7; width: 150px; padding: 10px; color: white">Hex: #5755a7</div>
-<div style="background-color: #d91c1f; width: 150px; padding: 10px; color: white">Hex: #d91c1f</div>
-<div style="background-color: #f7db00; width: 150px; padding: 10px; color: white">Hex: #f7db00</div>
-<div style="background-color: #ffffff33; width: 150px; padding: 10px; color: black">Hex: #ffffff33</div>
-<div style="background-color: #da237b; width: 150px; padding: 10px; color: white">Hex: #da237b</div>
-<div style="background-color: #13418b; width: 150px; padding: 10px; color: white">Hex: #13418b</div>
-<div style="background-color: #f26d22; width: 150px; padding: 10px; color: white">Hex: #f26d22</div>
-<div style="background-color: #4f5db0; width: 150px; padding: 10px; color: white">Hex: #4f5db0</div>
-<div style="background-color: #0f172a; width: 150px; padding: 10px; color: white">Hex: #0f172a</div>
-<br/>
-
-**Border Colors**
-
-<div style="background-color: #ffffff; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
-<div style="background-color: #475569; width: 150px; padding: 10px; color: black">Hex: #475569</div>
-
-<br />
-
-**Text Colors**
-
-<div style="background-color: #ffffff; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
-<div style="background-color: #18ed66; width: 150px; padding: 10px; color: black">Hex: #18ed66</div>
-<div style="background-color: #e31a1a; width: 150px; padding: 10px; color: black">Hex: #e31a1a</div>
-
-</details>
-
-<details>
-<summary>Font-families</summary>
-
-- Bree Serif
-
 </details>
 
 ### Preview
