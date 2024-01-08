@@ -56,6 +56,7 @@
 **teamMatchesApiUrl**
 
 #### API: `https://apis.ccbp.in/ipl/:id`
+</details>
 
 <details>
 <summary>Components Structure</summary>
